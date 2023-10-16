@@ -4,7 +4,7 @@
 
 DWORD WINAPI ThreadProc(CONST LPVOID lpParam)
 {
-	printf("Поток №%d выполняет свою работу\n", *(int*)lpParam);
+	printf("Поток №%d выполняет свою работу\n", static_cast<int>(reinterpret_cast<intptr_t>(lpParam)));
 	ExitThread(0);
 }
 
@@ -28,12 +28,10 @@ int main(int argc, CHAR* argv[])
 	}
 
 	HANDLE* handles = new HANDLE[numThreads];
-	int* threadNumbers = new int[numThreads];
 
 	for (int i = 0; i < numThreads; i++)
 	{
-		threadNumbers[i] = i;
-		handles[i] = CreateThread(NULL, 0, &ThreadProc, &threadNumbers[i], CREATE_SUSPENDED, NULL);
+		handles[i] = CreateThread(NULL, 0, &ThreadProc, (LPVOID)(intptr_t)i, CREATE_SUSPENDED, NULL);
 	}
 
 	for (int m = 0; m < numThreads; m++)
