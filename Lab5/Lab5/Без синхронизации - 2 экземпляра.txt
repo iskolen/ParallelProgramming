@@ -1,0 +1,109 @@
+[1 экземпляр]
+
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 690
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 920
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 1150
+Balance after deposit: 1380
+Balance after deposit: 1610
+Balance after deposit: 1840
+Balance after deposit: 2070
+Balance after deposit: 2300
+Balance after deposit: 2530
+Balance after deposit: 2760
+Balance after deposit: 2990
+Balance after deposit: 3220
+Balance after deposit: 3450
+Balance after deposit: 3680
+Balance after deposit: 3910
+Balance after deposit: 4140
+Balance after deposit: 4370
+Balance after deposit: 4600
+Balance after deposit: 4830
+Balance after deposit: 5060
+Balance after deposit: 5290
+Balance after deposit: 5520
+Balance after deposit: 5750
+Balance after deposit: 5980
+Balance after deposit: 460
+Balance after withdraw: -10020
+Balance after withdraw: -11020
+Balance after withdraw: -12020
+Balance after withdraw: -13020
+Balance after withdraw: -14020
+Balance after withdraw: -15020
+Balance after withdraw: -16020
+Balance after withdraw: -17020
+Balance after withdraw: -18020
+Balance after withdraw: -19020
+Balance after withdraw: -20020
+Balance after withdraw: -21020
+Balance after withdraw: -22020
+Balance after withdraw: -23020
+Balance after withdraw: -24020
+Balance after withdraw: -25020
+Balance after withdraw: -26020
+Balance after withdraw: -27020
+Balance after withdraw: -28020
+Balance after withdraw: -34020
+Balance after withdraw: -35020
+Balance after withdraw: -36020
+Final Balance: -36020
+
+
+
+[2 экземпляр]
+
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 460
+Balance after deposit: 230
+Cannot withdraw money, balance lower than 1000
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 690
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 920
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 1150
+Balance after deposit: 1380
+Balance after deposit: 1610
+Balance after deposit: 1840
+Balance after deposit: 2070
+Balance after deposit: 2300
+Balance after deposit: 2530
+Balance after deposit: 2760
+Balance after deposit: 2990
+Balance after deposit: 3220
+Balance after deposit: 3450
+Balance after deposit: 3680
+Balance after deposit: 3910
+Balance after deposit: 4140
+Balance after deposit: 4370
+Balance after deposit: 4600
+Balance after deposit: 4830
+Balance after deposit: 5060
+Balance after deposit: 5290
+Balance after deposit: 5520
+Balance after deposit: 230
+Balance after withdraw: 4980
+Balance after withdraw: 3980
+Balance after withdraw: 2980
+Balance after withdraw: 1980
+Balance after withdraw: 980
+Balance after withdraw: -20
+Balance after withdraw: -1020
+Balance after withdraw: -2020
+Balance after withdraw: -3020
+Balance after withdraw: -4020
+Balance after withdraw: -5020
+Balance after withdraw: -6020
+Balance after withdraw: -7020
+Balance after withdraw: -8020
+Balance after withdraw: -9020
+Balance after withdraw: -29020
+Balance after withdraw: -30020
+Balance after withdraw: -31020
+Balance after withdraw: -32020
+Balance after withdraw: -33020
+Final Balance: -36020

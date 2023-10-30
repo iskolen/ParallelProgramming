@@ -1,0 +1,51 @@
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 230
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 460
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 690
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 920
+Balance after deposit: 1150
+Balance after deposit: 380
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 610
+Cannot withdraw money, balance lower than 1000
+Balance after withdraw: 150
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 840
+Balance after deposit: 1070
+Balance after deposit: 300
+Cannot withdraw money, balance lower than 1000
+Balance after withdraw: 70
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 530
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 760
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 990
+Balance after deposit: 1220
+Balance after deposit: 450
+Cannot withdraw money, balance lower than 1000
+Balance after withdraw: 220
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 680
+Balance after deposit: 910
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 1140
+Balance after deposit: 370
+Cannot withdraw money, balance lower than 1000
+Balance after withdraw: 140
+Balance after deposit: 600
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 830
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 1060
+Balance after withdraw: 60
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 290
+Balance after deposit: 520
+Cannot withdraw money, balance lower than 1000
+Balance after deposit: 750
+Cannot withdraw money, balance lower than 1000
+Final Balance: 750
