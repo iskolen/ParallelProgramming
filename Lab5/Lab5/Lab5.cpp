@@ -4,62 +4,62 @@
 #include "tchar.h"
 #include <fstream>
 
-HANDLE FileLockingMutex;
-HANDLE BalanceLockingMutex;
+CRITICAL_SECTION FileLockingCriticalSection;
+CRITICAL_SECTION BalanceLockingCriticalSection;
 
 int ReadFromFile()
 {
-	WaitForSingleObject(FileLockingMutex, INFINITE);
+	EnterCriticalSection(&FileLockingCriticalSection);
 	std::fstream myfile("balance.txt", std::ios_base::in);
 	int result = 0;
 	myfile >> result;
 	myfile.close();
-	ReleaseMutex(FileLockingMutex);
+	LeaveCriticalSection(&FileLockingCriticalSection);
 
 	return result;
 }
 
 void WriteToFile(int data)
 {
-	WaitForSingleObject(FileLockingMutex, INFINITE);
+	EnterCriticalSection(&FileLockingCriticalSection);
 	std::fstream myfile("balance.txt", std::ios_base::out);
 	myfile << data << std::endl;
 	myfile.close();
-	ReleaseMutex(FileLockingMutex);
+	LeaveCriticalSection(&FileLockingCriticalSection);
 }
 
 int GetBalance()
 {
-	WaitForSingleObject(BalanceLockingMutex, INFINITE);
+	EnterCriticalSection(&BalanceLockingCriticalSection);
 	int balance = ReadFromFile();
-	ReleaseMutex(BalanceLockingMutex);
+	LeaveCriticalSection(&BalanceLockingCriticalSection);
 	return balance;
 }
 
 void Deposit(int money)
 {
-	WaitForSingleObject(BalanceLockingMutex, INFINITE);
+	EnterCriticalSection(&BalanceLockingCriticalSection);
 	int balance = GetBalance();
 	balance += money;
 	WriteToFile(balance);
-	ReleaseMutex(BalanceLockingMutex);
+	LeaveCriticalSection(&BalanceLockingCriticalSection);
 	printf("Balance after deposit: %d\n", balance);
 }
 
 void Withdraw(int money)
 {
-	WaitForSingleObject(BalanceLockingMutex, INFINITE);
+	EnterCriticalSection(&BalanceLockingCriticalSection);
 	int currentBalance = GetBalance();
 	if (currentBalance < money)
 	{
 		printf("Cannot withdraw money, balance lower than %d\n", money);
-		ReleaseMutex(BalanceLockingMutex);
+		LeaveCriticalSection(&BalanceLockingCriticalSection);
 		return;
 	}
 	Sleep(20);
 	int balance = currentBalance - money;
 	WriteToFile(balance);
-	ReleaseMutex(BalanceLockingMutex);
+	LeaveCriticalSection(&BalanceLockingCriticalSection);
 	printf("Balance after withdraw: %d\n", balance);
 }
 
@@ -79,8 +79,8 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	HANDLE* handles = new HANDLE[50];
 
-	FileLockingMutex = CreateMutex(NULL, FALSE, NULL);
-	BalanceLockingMutex = CreateMutex(NULL, FALSE, NULL);
+	InitializeCriticalSection(&FileLockingCriticalSection);
+	InitializeCriticalSection(&BalanceLockingCriticalSection);
 
 	WriteToFile(0);
 
@@ -98,8 +98,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	getchar();
 
-	CloseHandle(FileLockingMutex);
-	CloseHandle(BalanceLockingMutex);
+	DeleteCriticalSection(&FileLockingCriticalSection);
+	DeleteCriticalSection(&BalanceLockingCriticalSection);
 	delete[] handles;
 
 	return 0;
